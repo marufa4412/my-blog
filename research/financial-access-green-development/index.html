@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Applied Decision Modeling research project on financial access, green finance utilization, ESG adoption, and sustainable green development in Bangladesh."
+    >
+
+    <title>
+        Financial Access & Sustainable Green Development | Marufa Akter
+    </title>
+
+
+    <!-- Google Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+
+    <style>
+
+        :root {
+            --ivory: #fbf8f2;
+            --cream: #f2eadf;
+            --sage: #7f9078;
+            --sage-light: #dfe6da;
+            --sage-dark: #53634f;
+            --forest: #334137;
+            --charcoal: #303530;
+            --gold: #b89d6b;
+            --white: #ffffff;
+            --text: #373d38;
+            --muted: #747a73;
+            --border: rgba(51, 65, 55, 0.12);
+            --shadow: 0 18px 45px rgba(45, 53, 46, 0.08);
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--ivory);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", serif;
+            line-height: 1.2;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        .container {
+            width: min(1080px, calc(100% - 40px));
+            margin: auto;
+        }
+
+
+        /* HEADER */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(251, 248, 242, 0.95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .nav {
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            font-weight: 700;
+            color: var(--forest);
+        }
+
+
+        .logo span {
+            color: var(--gold);
+        }
+
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 16px;
+            border: 1px solid rgba(83, 99, 79, 0.3);
+            border-radius: 50px;
+            color: var(--sage-dark);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+
+        .back-button:hover {
+            background: var(--sage-dark);
+            color: white;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 82px 0 70px;
+        }
+
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            right: -170px;
+            top: -120px;
+            background: rgba(223, 230, 218, 0.7);
+        }
+
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+
+        .eyebrow {
+            color: var(--sage-dark);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+
+        .hero h1 {
+            max-width: 900px;
+            font-size: clamp(35px, 4vw, 48px);
+            letter-spacing: -1.2px;
+            color: var(--charcoal);
+        }
+
+
+        .subtitle {
+            max-width: 800px;
+            margin-top: 20px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 25px;
+        }
+
+
+        .hero-tags span {
+            padding: 7px 11px;
+            border-radius: 50px;
+            background: var(--sage-light);
+            color: var(--sage-dark);
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+
+        /* STATS */
+
+        .stats {
+            background: var(--forest);
+            color: white;
+        }
+
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+
+        .stat {
+            text-align: center;
+            padding: 27px 15px;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+
+        .stat strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            color: #f0dfbb;
+            font-size: 25px;
+        }
+
+
+        .stat span {
+            display: block;
+            color: rgba(255,255,255,0.55);
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+        /* GENERAL */
+
+        .section {
+            padding: 78px 0;
+        }
+
+
+        .soft {
+            background: var(--cream);
+        }
+
+
+        .dark {
+            background: var(--charcoal);
+            color: white;
+        }
+
+
+        .heading {
+            max-width: 720px;
+            margin-bottom: 40px;
+        }
+
+
+        .label {
+            display: block;
+            color: var(--sage-dark);
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+
+        .dark .label {
+            color: #dfcba2;
+        }
+
+
+        .heading h2 {
+            font-size: clamp(30px, 3.5vw, 42px);
+            letter-spacing: -1px;
+        }
+
+
+        .heading p {
+            margin-top: 10px;
+            color: var(--muted);
+        }
+
+
+        .dark .heading p {
+            color: rgba(255,255,255,0.58);
+        }
+
+
+        /* OVERVIEW */
+
+        .overview {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 55px;
+        }
+
+
+        .overview-text p {
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+
+        .overview-text strong {
+            color: var(--text);
+        }
+
+
+        .info-card {
+            background: white;
+            padding: 28px;
+            border-radius: 22px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+
+        .info-card h3 {
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+
+        .info-row {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .info-row:last-child {
+            border-bottom: 0;
+        }
+
+
+        .info-row span {
+            display: block;
+            color: var(--muted);
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+
+        .info-row strong {
+            font-size: 12px;
+        }
+
+
+        /* CHAIN */
+
+        .chain-scroll {
+            overflow-x: auto;
+        }
+
+
+        .chain {
+            min-width: 820px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+        }
+
+
+        .chain-box {
+            width: 170px;
+            min-height: 95px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 15px;
+            border-radius: 17px;
+            font-family: "Playfair Display", serif;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        .one { background: #dce8ef; }
+        .two { background: #dce8d8; }
+        .three { background: #eee3c9; }
+        .four { background: #e4daea; }
+
+
+        .arrow {
+            color: var(--sage-dark);
+            font-size: 20px;
+        }
+
+
+        .chain-note {
+            max-width: 730px;
+            text-align: center;
+            margin: 25px auto 0;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+
+        /* METHOD */
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+
+        .method-card {
+            background: white;
+            padding: 24px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+        }
+
+
+        .method-card i {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--sage-light);
+            color: var(--sage-dark);
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+
+        .method-card h3 {
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
+
+
+        .method-card p {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+
+        /* RESULTS */
+
+        .results {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 17px;
+        }
+
+
+        .result {
+            padding: 25px;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.04);
+        }
+
+
+        .result-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+
+        .result h3 {
+            font-size: 18px;
+        }
+
+
+        .supported,
+        .not-supported {
+            flex-shrink: 0;
+            font-size: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+
+        .supported {
+            color: #bdd4af;
+        }
+
+
+        .not-supported {
+            color: #e6b4aa;
+        }
+
+
+        .result p {
+            margin-top: 9px;
+            color: rgba(255,255,255,0.55);
+            font-size: 11px;
+        }
+
+
+        .value {
+            margin-top: 13px;
+            color: #dfcba2;
+            font-family: "Playfair Display", serif;
+            font-size: 17px;
+        }
+
+
+        .main-finding {
+            margin-top: 23px;
+            padding: 32px;
+            border-radius: 22px;
+            background: var(--forest);
+        }
+
+
+        .main-finding span {
+            color: #dfcba2;
+            font-size: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+
+        .main-finding h3 {
+            max-width: 720px;
+            margin: 8px 0 10px;
+            font-size: clamp(23px, 3vw, 31px);
+        }
+
+
+        .main-finding p {
+            max-width: 800px;
+            color: rgba(255,255,255,0.62);
+            font-size: 12px;
+        }
+
+
+        .main-value {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 8px 12px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.08);
+            color: #f0dfbb;
+            font-size: 11px;
+        }
+
+
+        /* INSIGHTS */
+
+        .insight {
+            display: grid;
+            grid-template-columns: 38px 1fr;
+            gap: 14px;
+            padding: 17px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .insight-number {
+            color: var(--gold);
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+        }
+
+
+        .insight h3 {
+            font-size: 19px;
+            margin-bottom: 4px;
+        }
+
+
+        .insight p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+
+        .skills span {
+            padding: 8px 12px;
+            border-radius: 50px;
+            background: var(--sage-light);
+            color: var(--sage-dark);
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+
+        .note {
+            margin-top: 35px;
+            padding: 22px;
+            background: #f5eee3;
+            border-left: 4px solid var(--gold);
+            border-radius: 14px;
+        }
+
+
+        .note strong {
+            display: block;
+            color: var(--forest);
+            margin-bottom: 5px;
+        }
+
+
+        .note p {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+
+        /* CTA */
+
+        .cta {
+            background: var(--sage-light);
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+
+        .cta h2 {
+            font-size: clamp(28px, 3.5vw, 38px);
+        }
+
+
+        .cta p {
+            max-width: 600px;
+            margin: 10px auto 20px;
+            color: var(--muted);
+        }
+
+
+        .cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--sage-dark);
+            color: white;
+            padding: 11px 18px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+
+        footer {
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.45);
+            text-align: center;
+            padding: 25px;
+            font-size: 10px;
+        }
+
+
+        @media (max-width: 850px) {
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .overview {
+                grid-template-columns: 1fr;
+            }
+
+            .method-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 60px 0 50px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .stats-grid,
+            .method-grid,
+            .results {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border-right: 0;
+                border-bottom: 1px solid rgba(255,255,255,0.08);
+            }
+
+            .section {
+                padding: 62px 0;
+            }
+
+            .back-button {
+                font-size: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container nav">
+
+        <a
+            href="../../index.html"
+            class="logo"
+        >
+            Marufa<span>.</span>
+        </a>
+
+
+        <a
+            href="../../index.html#research"
+            class="back-button"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Research
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-inner">
+
+                <div class="eyebrow">
+
+                    Applied Decision Modeling
+                    • Course Research Project
+
+                </div>
+
+
+                <h1>
+
+                    Financial Access and
+                    Sustainable Green Development
+                    in Bangladesh's Private Sector
+
+                </h1>
+
+
+                <p class="subtitle">
+
+                    A sequential-mediation study examining
+                    how financial access may translate into
+                    sustainable green development through
+                    proxy-based green finance utilization
+                    and ESG adoption.
+
+                </p>
+
+
+                <div class="hero-tags">
+
+                    <span>
+                        Sustainable Finance
+                    </span>
+
+                    <span>
+                        ESG
+                    </span>
+
+                    <span>
+                        Sequential Mediation
+                    </span>
+
+                    <span>
+                        World Bank Enterprise Survey
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="container stats-grid">
+
+            <div class="stat">
+
+                <strong>
+                    998
+                </strong>
+
+                <span>
+                    Firms
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    5,000
+                </strong>
+
+                <span>
+                    Bootstrap Resamples
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    0.547
+                </strong>
+
+                <span>
+                    Full Model R²
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    2022
+                </strong>
+
+                <span>
+                    WBES Bangladesh
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- OVERVIEW -->
+
+    <section class="section">
+
+        <div class="container">
+
+
+            <div class="heading">
+
+                <span class="label">
+                    01 — Project Overview
+                </span>
+
+
+                <h2>
+                    From financial access to sustainable outcomes.
+                </h2>
+
+
+                <p>
+
+                    The project investigates whether
+                    finance contributes to sustainability
+                    directly or through a chain of
+                    organizational mechanisms.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="overview">
+
+
+                <div class="overview-text">
+
+
+                    <p>
+
+                        This study examines the relationship
+                        between <strong>financial access</strong>
+                        and <strong>sustainable green development</strong>
+                        among formal private firms in Bangladesh.
+
+                    </p>
+
+
+                    <p>
+
+                        The central idea is that access to
+                        finance may not automatically create
+                        sustainability. Instead, firms may
+                        need to convert finance into
+                        <strong>green-oriented investment</strong>
+                        and then into
+                        <strong>ESG capability</strong>.
+
+                    </p>
+
+
+                    <p>
+
+                        Sustainable green development is
+                        represented through environmental,
+                        economic and social performance,
+                        following a triple-bottom-line
+                        perspective.
+
+                    </p>
+
+
+                    <p>
+
+                        The study uses the
+                        <strong>World Bank Enterprise Survey
+                        Bangladesh 2022</strong>
+                        to test this conversion-chain model.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-card">
+
+                    <h3>
+                        Project Snapshot
+                    </h3>
+
+
+                    <div class="info-row">
+
+                        <span>Course</span>
+
+                        <strong>
+                            Applied Decision Modeling
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Authors</span>
+
+                        <strong>
+                            Marufa Akter &
+                            Jahin Afrin Ahona
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Institution</span>
+
+                        <strong>
+                            United International University
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Research Design</span>
+
+                        <strong>
+                            Quantitative,
+                            Cross-sectional
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Analysis</span>
+
+                        <strong>
+                            Robust OLS +
+                            Sequential Mediation
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <span>Data Source</span>
+
+                        <strong>
+                            World Bank Enterprise Survey
+                            Bangladesh 2022
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FRAMEWORK -->
+
+    <section class="section soft">
+
+        <div class="container">
+
+
+            <div class="heading">
+
+                <span class="label">
+                    02 — Conceptual Framework
+                </span>
+
+
+                <h2>
+                    The conversion chain.
+                </h2>
+
+
+                <p>
+
+                    The framework proposes an ordered
+                    pathway from financial resources
+                    to sustainable firm performance.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="chain-scroll">
+
+                <div class="chain">
+
+
+                    <div class="chain-box one">
+
+                        Financial
+                        Access
+
+                    </div>
+
+
+                    <div class="arrow">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+
+                    <div class="chain-box two">
+
+                        Proxy-Based
+                        Green Finance
+                        Utilization
+
+                    </div>
+
+
+                    <div class="arrow">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+
+                    <div class="chain-box three">
+
+                        ESG
+                        Adoption
+
+                    </div>
+
+
+                    <div class="arrow">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </div>
+
+
+                    <div class="chain-box four">
+
+                        Sustainable
+                        Green
+                        Development
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="chain-note">
+
+                Finance enables deployment,
+                deployment may build ESG capability,
+                and ESG capability is associated
+                with sustainable performance.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- METHODOLOGY -->
+
+    <section class="section">
+
+        <div class="container">
+
+
+            <div class="heading">
+
+                <span class="label">
+                    03 — Methodology
+                </span>
+
+
+                <h2>
+                    How the study was analyzed.
+                </h2>
+
+            </div>
+
+
+
+            <div class="method-grid">
+
+
+                <div class="method-card">
+
+                    <i class="fa-solid fa-database"></i>
+
+                    <h3>
+                        Secondary Data
+                    </h3>
+
+                    <p>
+
+                        The study uses World Bank
+                        Enterprise Survey Bangladesh
+                        2022 firm-level data.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="method-card">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <h3>
+                        998 Firms
+                    </h3>
+
+                    <p>
+
+                        The analytical sample covers
+                        formal private manufacturing
+                        and service-sector firms.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="method-card">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <h3>
+                        Robust OLS
+                    </h3>
+
+                    <p>
+
+                        Regression models use HC1
+                        heteroskedasticity-consistent
+                        standard errors.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="method-card">
+
+                    <i class="fa-solid fa-code-branch"></i>
+
+                    <h3>
+                        Mediation
+                    </h3>
+
+                    <p>
+
+                        Indirect effects were evaluated
+                        using 5,000 bootstrap resamples.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- RESULTS -->
+
+    <section class="section dark">
+
+        <div class="container">
+
+
+            <div class="heading">
+
+                <span class="label">
+                    04 — Key Results
+                </span>
+
+
+                <h2>
+                    What the models revealed.
+                </h2>
+
+
+                <p>
+
+                    The results suggest that
+                    finance matters, but its relationship
+                    with sustainability is more nuanced
+                    than a simple direct effect.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="results">
+
+
+                <div class="result">
+
+                    <div class="result-top">
+
+                        <h3>
+                            Financial Access → SGD
+                        </h3>
+
+                        <span class="supported">
+                            Supported
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        Financial access was positively
+                        associated with sustainable
+                        green development.
+
+                    </p>
+
+                    <div class="value">
+                        b = 0.083 • p = .015
+                    </div>
+
+                </div>
+
+
+
+                <div class="result">
+
+                    <div class="result-top">
+
+                        <h3>
+                            Financial Access → GFU
+                        </h3>
+
+                        <span class="supported">
+                            Supported
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        Financial access was strongly
+                        associated with proxy-based
+                        green finance utilization.
+
+                    </p>
+
+                    <div class="value">
+                        b = 0.347 • p &lt; .001
+                    </div>
+
+                </div>
+
+
+
+                <div class="result">
+
+                    <div class="result-top">
+
+                        <h3>
+                            GFU → SGD
+                        </h3>
+
+                        <span class="not-supported">
+                            Not Supported
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        Green-finance utilization
+                        alone did not significantly
+                        predict sustainable outcomes.
+
+                    </p>
+
+                    <div class="value">
+                        b = 0.037 • p = .091
+                    </div>
+
+                </div>
+
+
+
+                <div class="result">
+
+                    <div class="result-top">
+
+                        <h3>
+                            Financial Access → ESG
+                        </h3>
+
+                        <span class="not-supported">
+                            Not Supported
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        Financial access alone was
+                        not significantly associated
+                        with ESG adoption.
+
+                    </p>
+
+                    <div class="value">
+                        b = −0.024 • p = .504
+                    </div>
+
+                </div>
+
+
+
+                <div class="result">
+
+                    <div class="result-top">
+
+                        <h3>
+                            ESG → SGD
+                        </h3>
+
+                        <span class="supported">
+                            Supported
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        ESG adoption showed a strong
+                        positive association with
+                        sustainable green development.
+
+                    </p>
+
+                    <div class="value">
+                        b = 0.179 • p &lt; .001
+                    </div>
+
+                </div>
+
+
+
+                <div class="result">
+
+                    <div class="result-top">
+
+                        <h3>
+                            GFU → ESG
+                        </h3>
+
+                        <span class="supported">
+                            Supported
+                        </span>
+
+                    </div>
+
+                    <p>
+
+                        Proxy-based green finance
+                        utilization was positively
+                        associated with ESG adoption
+                        in the primary model.
+
+                    </p>
+
+                    <div class="value">
+                        b = 0.075 • p = .002
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="main-finding">
+
+                <span>
+                    Main Finding
+                </span>
+
+
+                <h3>
+
+                    The full sequential
+                    mediation pathway was supported.
+
+                </h3>
+
+
+                <p>
+
+                    Neither green-finance utilization
+                    nor ESG adoption worked as a
+                    significant single mediator alone.
+                    However, the ordered pathway from
+                    financial access through green-finance
+                    utilization and ESG adoption to
+                    sustainable green development was
+                    statistically supported.
+
+                </p>
+
+
+                <div class="main-value">
+
+                    Indirect = 0.0051
+                    • 95% CI [0.0018, 0.0097]
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- INTERPRETATION -->
+
+    <section class="section">
+
+        <div class="container">
+
+
+            <div class="heading">
+
+                <span class="label">
+                    05 — Interpretation
+                </span>
+
+
+                <h2>
+                    What I learned from the project.
+                </h2>
+
+            </div>
+
+
+
+            <div class="insight">
+
+                <div class="insight-number">
+                    01
+                </div>
+
+                <div>
+
+                    <h3>
+                        Financial access matters.
+                    </h3>
+
+                    <p>
+
+                        Firms with stronger financial
+                        access showed stronger sustainable
+                        green-development outcomes.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="insight">
+
+                <div class="insight-number">
+                    02
+                </div>
+
+                <div>
+
+                    <h3>
+                        Finance alone is insufficient.
+                    </h3>
+
+                    <p>
+
+                        Simply deploying finance did not
+                        automatically translate into
+                        stronger sustainability performance.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="insight">
+
+                <div class="insight-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h3>
+                        ESG capability appears important.
+                    </h3>
+
+                    <p>
+
+                        ESG adoption was one of the
+                        strongest correlates of sustainable
+                        green development.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="insight">
+
+                <div class="insight-number">
+                    04
+                </div>
+
+                <div>
+
+                    <h3>
+                        Sustainability works as a chain.
+                    </h3>
+
+                    <p>
+
+                        The findings suggest that finance
+                        becomes more meaningful when
+                        converted into investment deployment
+                        and organizational ESG capability.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SKILLS -->
+
+    <section class="section soft">
+
+        <div class="container">
+
+
+            <div class="heading">
+
+                <span class="label">
+                    06 — Skills Demonstrated
+                </span>
+
+
+                <h2>
+                    What this project added to my toolkit.
+                </h2>
+
+            </div>
+
+
+
+            <div class="skills">
+
+                <span>Applied Decision Modeling</span>
+                <span>Regression Analysis</span>
+                <span>Robust OLS</span>
+                <span>Sequential Mediation</span>
+                <span>Bootstrap Inference</span>
+                <span>World Bank Enterprise Survey</span>
+                <span>Secondary Data Analysis</span>
+                <span>ESG Analysis</span>
+                <span>Sustainable Finance</span>
+                <span>Research Design</span>
+                <span>Statistical Interpretation</span>
+                <span>Academic Writing</span>
+
+            </div>
+
+
+
+            <div class="note">
+
+                <strong>
+                    Portfolio note
+                </strong>
+
+                <p>
+
+                    This project was completed as academic
+                    coursework for Applied Decision Modeling.
+                    It is presented as a course research
+                    project rather than a peer-reviewed
+                    publication. Because the dataset is
+                    cross-sectional, the findings are
+                    interpreted as associations rather than
+                    causal effects.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <h2>
+            Explore more of my research.
+        </h2>
+
+
+        <p>
+
+            This project is part of my growing
+            portfolio in Business Analytics,
+            sustainability and applied
+            quantitative research.
+
+        </p>
+
+
+        <a href="../../index.html#research">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Research Corner
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    © 2026 Marufa Akter
+    • Research Portfolio
+
+</footer>
+
+
+</body>
+
+</html>

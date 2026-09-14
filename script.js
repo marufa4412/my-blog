@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentYear =
         document.getElementById("currentYear");
 
+
     if (currentYear) {
 
         currentYear.textContent =
@@ -78,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     const icon =
                         menuToggle.querySelector("i");
+
 
                     icon.className =
                         "fa-solid fa-bars";
@@ -549,6 +551,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "%cMarufa's Portfolio",
         "font-size:18px; font-weight:bold; color:#53634f;"
     );
+
 
     console.log(
         "Data • Research • Stories • Growth"
